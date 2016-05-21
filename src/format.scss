@@ -1,5 +1,107 @@
 /* Shared CSS for AsciiDoc xhtml11 and html5 backends */
 
+@import "colors";
+
+/*** color definition placements ***/
+body {
+	background: $body-bg;
+	color: $body-color;
+}
+
+a {
+	color: $link-color;
+}
+
+a:visited {
+	color: $visited-color;
+}
+
+em {
+	/* color: $em-color; */
+}
+
+strong {
+	/* color: $strong-color; */
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: $header-color;
+}
+
+ul > li {
+	color: $bullet-color;
+}
+ul > li > * {
+	color: $body-color;
+}
+
+.monospaced, code, pre {
+	color: $em-color;
+}
+
+#author {
+	color: $author-color;
+}
+
+div.admonitionblock {
+	color: $admonition-color;
+}
+
+div.title, caption.title {
+	color: $header-color;
+}
+
+div.sidebarblock > div.content {
+	background-color: $sidebar-bg;
+}
+
+div.listingblock > div.content {
+	background-color: $listing-bg;
+}
+
+div.quoteblock, div.verseblock {
+	color: $qv-color;
+}
+
+blockquote {
+	color: $qv-color;
+}
+
+div.admonitionblock .icon {
+	color: $header-color;
+}
+
+
+a.image:visited {
+	color: $img-visited-color;
+}
+
+dt {
+	color: $em-color;
+}
+
+td.hdlist1 {
+	color: $em-color;
+}
+
+.comment {
+	background-color: $comment-bg;
+}
+
+#toctitle {
+	color: $header-color;
+}
+
+/* xhtm11 specific */
+
+thead, p.table.header {
+	color: $header-color;
+}
+
+thead, p.tableblock.header {
+	color: $header-color;
+}
+
 /* Default font. */
 body {
   font-family: Georgia,serif;
@@ -40,8 +142,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, h2, h3 {
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
+  border-bottom: 2px solid $header-border-color;
 }
 h2 {
   padding-top: 0.5em;
@@ -62,8 +163,7 @@ div.sectionbody {
 }
 
 hr {
-  border-width: 1px;
-  border-style: solid;
+  border: 1px solid $header-border-color;
 }
 
 p {
@@ -98,8 +198,7 @@ pre {
 
 #footer {
   font-size: small;
-  border-top-width: 2px;
-  border-top-style: solid;
+  border-top: 2px solid $header-border-color;
   padding-top: 0.5em;
   margin-top: 4.0em;
 }
@@ -154,18 +253,14 @@ div.content + div.title {
 }
 
 div.sidebarblock > div.content {
-  border-width: 1px;
-  border-style: solid;
-  border-left-width: 4px;
-  border-left-style: solid;
+  border: 1px solid $content-border-color;
+  border-left: 4px solid $content-border-left-color;
   padding: 0.5em;
 }
 
 div.listingblock > div.content {
-  border-width: 1px;
-  border-style: solid;
-  border-left-width: 5px;
-  border-left-style: solid;
+  border: 1px solid $content-border-color;
+  border-left: 5px solid $content-border-left-color;
   padding: 0.5em;
 }
 
@@ -173,13 +268,11 @@ div.quoteblock, div.verseblock {
   padding-left: 1.0em;
   margin-left: 1.0em;
   margin-right: 10%;
-  border-left-width: 5px;
-  border-left-style: solid;
+  border-left: 5px solid $content-border-left-color;
 }
 
 blockquote {
-  border-left-width: 5px;
-  border-left-style: solid;
+  border-left: 5px solid $content-border-left-color;
   padding-left: 1.0em;
 }
 
@@ -210,14 +303,12 @@ div.admonitionblock .icon {
 }
 div.admonitionblock td.content {
   padding-left: 0.5em;
-  border-left-width: 3px;
-  border-left-style: solid;
+  border-left: 3px solid $content-border-color;
 }
 
 div.exampleblock > div.content {
-  border-left-width: 3px;
-  border-left-style: solid;
   padding-left: 0.5em;
+  border-left: 3px solid $content-border-color;
 }
 
 div.imageblock div.content { padding-left: 0; }
@@ -315,8 +406,7 @@ span.footnote, span.footnoteref {
 
 #footnotes hr {
   border: none;
-  border-top-width: 1px;
-  border-top-style: solid;
+  border-top: 1px solid $header-border-color;
   height: 1px;
   text-align: left;
   margin-left: 0;
@@ -377,8 +467,7 @@ div.tableblock {
   margin-bottom: 1.5em;
 }
 div.tableblock > table {
-  border-width: 3px;
-  border-style: solid;
+  border: 3px solid $header-color;
 }
 thead, p.table.header {
   font-weight: bold;
@@ -416,13 +505,12 @@ p.tableblock {
   margin-top: 0;
 }
 table.tableblock {
-  border-width: 3px;
+  border: 3px solid $header-color;
   border-spacing: 0px;
-  border-style: solid;
   border-collapse: collapse;
 }
 th.tableblock, td.tableblock {
-  border-width: 1px;
+  border-width: 1px solid $header-color;
   padding: 4px;
   border-style: solid;
 }
@@ -468,10 +556,8 @@ th.tableblock.valign-bottom, td.tableblock.valign-bottom {
 body.manpage h1 {
   padding-top: 0.5em;
   padding-bottom: 0.5em;
-  border-top-width: 2px;
-  border-top-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
+  border-top: 2px solid $header-border-color;
+  border-bottom: 2px solid $header-border-color;
 }
 body.manpage h2 {
   border-style: none;
