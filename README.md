@@ -14,5 +14,5 @@ If you need physical indents (because libreoffice), append -physical to the
 theme name.
 
 ## How to use output
-* `a2x -f xhtml -r "$(realpath output/theme-name)" --stylesheet="asciidoc.css"`
+* `a2x -f xhtml -r "$(realpath output/theme-name)" --stylesheet="theme-name.css"`
 * `asciidoc -a themedir="$(realpath output/theme-name)"`
