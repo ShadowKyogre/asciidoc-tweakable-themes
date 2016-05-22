@@ -4,6 +4,7 @@ Welcome! This is most of my personal tweaks to the default theme extracted. It h
 
 ## Dependencies
 - `sassc` for compiling
+- `pygmentize` for custom pygment theme embedded (optional)
 
 ## Compiling
 
