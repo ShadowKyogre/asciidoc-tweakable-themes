@@ -368,6 +368,13 @@ div.hdlist {
 div.hdlist tr {
   padding-bottom: 15px;
 }
+div.hdlist tr td {
+  border-bottom: 1px solid;
+}
+
+div.hdlist tr:last-child td {
+  border-bottom: none;
+}
 dt.hdlist1.strong, td.hdlist1.strong {
   font-weight: bold;
 }
