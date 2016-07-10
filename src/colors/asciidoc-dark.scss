@@ -1,3 +1,4 @@
+// NORMAL COLORS
 $body-bg: #222;
 $body-color: white;
 $toc-bg: #101010;
@@ -17,3 +18,16 @@ $listing-bg: #333;
 $qv-color: #aaa;
 $img-visited-color: white;
 $comment-bg: yellow;
+
+// SLIDY COLORS
+$toolbar-bg:              #242424;
+$toolbar-color:           #F040A4;
+$toolbar-border-color:    #b4b4b4;
+$prompt-bg:               #c8c8c8;
+$prompt-bg-alpha:         rgba($toolbar-bg, 0.35);
+$slidy-toc-bg:            $toolbar-bg;
+$slidy-link-color:        #303EB6;
+$slidy-link-hover-color:  #F040A4;
+$slidy-nav-color:         white;
+$slidy-nav-visited-color: yellow;
+$slidy-nav-hover-color:   #F040A4;

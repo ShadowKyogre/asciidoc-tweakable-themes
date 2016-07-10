@@ -5,6 +5,8 @@ define make-css-theme
 	ln -s colors/$*.scss src/_colors.scss
 	mkdir -p output/$@/
 	sassc src/theme.scss output/$@/$@.css
+	sassc src/slidy.scss output/$@/slidy.css
+	sassc src/toc2.scss  output/$@/toc2.css
 endef
 
 define make-css-theme-physical
