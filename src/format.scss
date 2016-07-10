@@ -368,11 +368,15 @@ div.hdlist {
 div.hdlist tr {
   padding-bottom: 15px;
 }
-div.hdlist tr td {
-  border-bottom: 1px solid;
+div.hdlist > table {
+  border-collapse: collapse;
 }
 
-div.hdlist tr:last-child td {
+div.hdlist > table > tbody > tr > td {
+  border-bottom: 1px solid $content-border-color;
+}
+
+div.hdlist > table > tbody > tr:last-child > td {
   border-bottom: none;
 }
 dt.hdlist1.strong, td.hdlist1.strong {
