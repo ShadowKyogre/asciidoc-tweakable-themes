@@ -15,6 +15,7 @@ define make-css-theme-physical
 endef
 
 define make-pygment-scheme
+	echo ".highlight { background: transparent !important; }" >> output/$@/$@.css
 	-pygmentize -S "$$(sed -n 1p src/colors/$*.pygment)" -f html | \
 		sed -e 's|color: \(#[a-fA-F0-9]\{6\}\)|color: \1 !important|g;s|^|.highlight |g' >> output/$@/$@.css
 endef
